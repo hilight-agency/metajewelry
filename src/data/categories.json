@@ -1,0 +1,31 @@
+
+[
+  {
+    "slug": "basic-animations",
+    "title": "Basic animations",
+    "descr": "basic-descr",
+    "price": "basic-price",
+    "filepath": "basic",
+    "works": [
+      "SokolovBird","SokolovEarrings","SokolovGoldenRing2","1","7","11"
+    ]
+  },{
+    "slug": "creative-animations",
+    "title": "Creative animations",
+    "descr": "creative-descr",
+    "price": "creative-price",
+    "filepath": "creative",
+    "works": [
+      "BellissimaDoublering","MarfinBraclet","MasterbrilliantMany","TopdogBraclet","UntamedBraclet","5","1","2","6","4","SokolovLepestki2"
+    ]
+  },{
+    "slug": "turntable-animations",
+    "title": "Turntable animations",
+    "descr": "turntable-descr",
+    "price": "turntable-price",
+    "filepath": "basic",
+    "works": [
+      "KarlcouchonRingTime","MasterbrilRingRedgem","2","5","6","9","10","12","13"
+    ]
+  }
+]
