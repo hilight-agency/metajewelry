@@ -40,5 +40,5 @@
     "react-scroll": "^1.8.6",
     "tailwindcss": "^3.0.23"
   },
-  "packageManager": "yarn@4.0.1"
+  "packageManager": "yarn@4.2.1"
 }
