@@ -1,6 +1,16 @@
 
 [
   {
+    "slug":"still-images",
+    "title": "Still images",
+    "descr": "still-images-descr",
+    "price": "still-images-price",
+    "filepath": "basic",
+    "works": [
+      "SokolovBird","SokolovEarrings","SokolovGoldenRing2","1","7","11"
+    ]
+  },
+  {
     "slug": "basic-animations",
     "title": "Basic animations",
     "descr": "basic-descr",
@@ -23,6 +33,15 @@
     "title": "Turntable animations",
     "descr": "turntable-descr",
     "price": "turntable-price",
+    "filepath": "basic",
+    "works": [
+      "KarlcouchonRingTime","MasterbrilRingRedgem","2","5","6","9","10","12","13"
+    ]
+  },{
+    "slug": "web-360-presentations",
+    "title": "Web 360 presentations",
+    "descr": "web-360-descr",
+    "price": "web-360-price",
     "filepath": "basic",
     "works": [
       "KarlcouchonRingTime","MasterbrilRingRedgem","2","5","6","9","10","12","13"
