@@ -58,5 +58,12 @@
 	"turntable-descr": "Turntable animations are videos with a dark or light background. Simple animation rotation of the jewelry to show it from all sides. It is possible to join several frames with different movements and angles, also add simple music background. Well suited for a catalog display of jewelry.",
 	"turntable-price": "Price from $99 per visualization",
 	"basic-descr": "Animations on a single-color background with dynamic editing accompanied by music.",
-	"basic-price": "Price from $99 per visualization"
+	"basic-price": "Price from $99 per visualization",
+	"still-images-descr": "An indispensable ecommerce classic made on the basis of 3D models.",
+	"still-images-price": "Price from $99 per visualization",
+	"web-360-descr": "Open the door to a world of interactive online jewelry presentations where technology opens access to a unique experience by allowing you to showcase, manage and interact with jewelry in real time on any device with internet access.",
+	"web-360-price": "Price from $99 per visualization",
+	"onbody-visualizations-descr":"Onbody visual content allows you to understand how the jewelry or jewelry set will look in reality, will help your client in making the perfect choice.",
+	"onbody-visualizations-price": "Price from $99 per visualization",
+	"_##_":"_##_"
 }

@@ -38,13 +38,22 @@
       "KarlcouchonRingTime","MasterbrilRingRedgem","2","5","6","9","10","12","13"
     ]
   },{
+    "slug": "onbody-visualizations",
+    "title": "Onbody visualizations",
+    "descr": "onbody-visualizations-descr",
+    "price": "onbody-visualizations-price",
+    "filepath": "basic",
+    "works": [
+      ""
+    ]
+  },{
     "slug": "web-360-presentations",
     "title": "Web 360 presentations",
     "descr": "web-360-descr",
     "price": "web-360-price",
     "filepath": "basic",
     "works": [
-      "KarlcouchonRingTime","MasterbrilRingRedgem","2","5","6","9","10","12","13"
+      ""
     ]
   }
 ]
