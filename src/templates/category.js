@@ -1,8 +1,8 @@
 import * as React from 'react'
 import ReactVideo from '../components/reactvideo'
 import * as Scroll from 'react-scroll'
-import { GatsbySeo } from 'gatsby-plugin-next-seo';
-import { useIntl } from "gatsby-plugin-intl-v4"
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
+import { useIntl } from 'gatsby-plugin-intl-v4'
 
 const Product = ({ pageContext }) => {
   const t = useIntl().formatMessage;
@@ -60,7 +60,8 @@ const Product = ({ pageContext }) => {
         }],
       }} />
     <div className={`transition-opacity duration-500 bg-black fixed z-30 top-0 left-0 w-full h-full ${playState !== false ? `opacity-90` : `pointer-events-none opacity-0`}`}
-      onClick={() => { setPlayState(false); }}>
+      onClick={() => { setPlayState(false); }}
+      role='button' aria-label='Pause' onKeyDown={()=>{}} tabIndex={0}>
       &nbsp;
     </div>
     <div className={`bg-black w-full h-auto lg:h-screen`}>

@@ -12,3 +12,8 @@ const Layout = ({ location, children }) => {
   )
 }
 export default Layout
+export const Head = ()=>{
+  return (
+    <meta name="theme-color" content="#ffffff" />
+  )
+}

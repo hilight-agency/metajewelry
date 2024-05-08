@@ -7636,9 +7636,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^4.9.0":
-  version: 4.25.7
-  resolution: "gatsby@npm:4.25.7"
+"gatsby@npm:^4.19.0":
+  version: 4.25.8
+  resolution: "gatsby@npm:4.25.8"
   dependencies:
     "@babel/code-frame": "npm:^7.14.0"
     "@babel/core": "npm:^7.15.5"
@@ -7814,7 +7814,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: 10c0/6af054174b63716802589cd69fd6e476350f6e48e39c6f4f8bbaec8de824f97b7db5ef073a1eebc4975ed801b83013db4841ea38d70d594637b39b1370414f98
+  checksum: 10c0/5af4b0237390bc8a79ac8638329a47bf0c4d2bc5266aa86bb293ce5711d4b5b016969dad6301a7d728c14ea28c7838ef2eae557aa4789570aeda70eaf6e63ea3
   languageName: node
   linkType: hard
 
@@ -10221,7 +10221,7 @@ __metadata:
     "@tailwindcss/typography": "npm:^0.5.2"
     autoprefixer: "npm:^10.4.2"
     formik: "npm:^2.2.9"
-    gatsby: "npm:^4.9.0"
+    gatsby: "npm:^4.19.0"
     gatsby-plugin-intl-v4: "npm:^0.3.6"
     gatsby-plugin-layout: "npm:^3.9.0"
     gatsby-plugin-next-seo: "npm:^1.10.0"
