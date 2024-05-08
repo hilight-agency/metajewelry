@@ -5,10 +5,10 @@
     "title": "Still images",
     "descr": "still-images-descr",
     "price": "still-images-price",
-    "filepath": "basic",
-    "template":"category",
+    "filepath": "still",
+    "template":"stillimages",
     "works": [
-      "SokolovBird","SokolovEarrings","SokolovGoldenRing2","1","7","11"
+      "11","2","3","4","5","6","7","8","9","10","1"
     ]
   },
   {
