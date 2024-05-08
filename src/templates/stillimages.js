@@ -37,7 +37,7 @@ const Stillimages = ({ pageContext }) => {
       </div>
     </div>
     <div className={`bg-black`}> 
-    <h2 className={`py-[10px] font-black text-xl text-center text-white lg:text-4xl uppercase`}>{t({ id: "ourworks" })}</h2>    
+    <h2 className={`py-[10px] font-black text-xl text-center text-white lg:text-4xl uppercase`}>{t({ id: `${pageContext.filepath}ourworks` })}</h2>    
     <Carousel slides={pageContext.works.map((e) => {
       const basepath = `https://cdn.mustbefamily.com/j3d/${pageContext.filepath}/${e}`
       const image={
