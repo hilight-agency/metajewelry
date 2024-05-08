@@ -4,7 +4,7 @@ import useWindowSize from '../utils/useWindowSize'
 import ReactVideo from "../components/reactvideo"
 import { graphql } from 'gatsby'
 import { GatsbySeo } from 'gatsby-plugin-next-seo'
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl-v4"
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
 import { Tween } from 'react-gsap'

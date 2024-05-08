@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl-v4"
 
 const Footer = ({ loc }) => {
   const t = useIntl().formatMessage;

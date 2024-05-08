@@ -1,7 +1,7 @@
 import * as React from "react"
 import MailForm from "../components/mailform"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl-v4"
 
 const ContactsPage = () => {
   const t = useIntl().formatMessage;

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl-v4"
 
 const MailForm = ({ Styles }) => {
   const t = useIntl().formatMessage;

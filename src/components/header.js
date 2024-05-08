@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import * as React from 'react'
 import { globalHistory } from '@reach/router'
 import { StaticQuery, graphql } from 'gatsby'
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl-v4"
 
 const Header = ({ data, loc }) => {
   const t = useIntl().formatMessage;

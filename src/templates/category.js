@@ -2,7 +2,7 @@ import * as React from 'react'
 import ReactVideo from '../components/reactvideo'
 import * as Scroll from 'react-scroll'
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl-v4"
 
 const Product = ({ pageContext }) => {
   const t = useIntl().formatMessage;
