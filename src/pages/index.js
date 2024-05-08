@@ -120,9 +120,9 @@ const IndexPage = ({ data }) => {
       </div>
       <div className={`bg-white md:bg-black`}>
         <div className={`grid grid-cols-1 pb-5 md:pb-0 gap-5 md:gap-0 md:container md:mx-auto md:grid-cols-3`}>
-          {data.allCategoriesJson.nodes.map((e) => {
+          {data.allCategoriesJson.nodes.map((e,j) => {
             return (
-              <Item to={`/${e.slug}`} label={e.title} styleObj={{ backgroundImage: `url('/images/${e.slug}.jpg')` }}></Item>
+              <Item to={`/${e.slug}`} label={e.title} styleObj={{ backgroundImage: `url('/images/${e.slug}.jpg')` }} key={`${e.slug}-${j}`}></Item>
             )
           })}
         </div>

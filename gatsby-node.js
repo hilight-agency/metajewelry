@@ -10,23 +10,17 @@ exports.createPages = async ({ graphql, actions }) => {
           price
           works
           filepath
+          template
         }
       }
     }`)
   const { createPage } = actions
-  const catTemplate = path.resolve(`src/templates/category.js`)
   data.allCategoriesJson.nodes.forEach(category => {
+    const catTemplate = path.resolve(`src/templates/${category.template}.js`)
     createPage({
       path: category.slug,
       component: catTemplate,
-      context: {
-        slug: category.slug,
-        filepath: category.filepath,
-        title: category.title,
-        descr: category.descr,
-        price: category.price,
-        works: category.works,
-      },
+      context: {...category},
     })
   })
 }
