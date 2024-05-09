@@ -1,0 +1,11 @@
+{
+    "slug": "web-360-presentations",
+    "title": "Web 360 presentations",
+    "descr": "web-360-descr",
+    "price": "web-360-price",
+    "filepath": "basic",
+    "template":"web360",
+    "works": [
+      ""
+    ]
+  }

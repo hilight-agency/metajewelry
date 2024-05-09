@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { GatsbySeo } from 'gatsby-plugin-next-seo'
 import { useIntl } from 'gatsby-plugin-intl-v4'
+import Viewer3d from '../components/3dviewer'
 
 const Web360Product = ({ pageContext }) => {
   const t = useIntl().formatMessage;
@@ -37,7 +38,7 @@ const Web360Product = ({ pageContext }) => {
     </div>
     <div className={`bg-white md:bg-black`}>
       <div className={`grid px-5 last:pb-5 md:px-0 grid-cols-1 gap-5 md:gap-0 md:grid-cols-2 `}>
-        {/* Place 3d config here */}
+        <Viewer3d/>
       </div>
     </div>
   </>
