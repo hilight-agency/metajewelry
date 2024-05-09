@@ -37,9 +37,7 @@ const Web360Product = ({ pageContext }) => {
       </div>
     </div>
     <div className={`bg-white md:bg-black`}>
-      <div className={`p-2 min-h-screen h-screen`}>
         <Viewer3d/>
-      </div>
     </div>
   </>
   )
