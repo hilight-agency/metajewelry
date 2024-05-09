@@ -52,12 +52,12 @@
       "1","2","3","4","5","6","7"
     ]
   },{
-    "slug": "video",
-    "title": "Video",
-    "descr": "video-descr",
-    "price": "video-price",
-    "filepath": "video",
-    "template":"category",
+    "slug": "web-360-presentations",
+    "title": "Web 360 presentations",
+    "descr": "web-360-descr",
+    "price": "web-360-price",
+    "filepath": "basic",
+    "template":"web360",
     "works": [
       ""
     ]

@@ -15,6 +15,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@react-three/drei": "^9.105.6",
+    "@react-three/fiber": "^8.16.5",
+    "@react-three/postprocessing": "^2.16.2",
     "@tailwindcss/typography": "^0.5.13",
     "autoprefixer": "^10.4.19",
     "formik": "^2.4.6",
@@ -31,6 +34,8 @@
     "gsap": "^3.12.5",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
+    "postprocessing": "^6.35.4",
+    "r3f-perf": "^7.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-gsap": "^3.2.1",
@@ -39,6 +44,8 @@
     "react-player": "^2.16.0",
     "react-scroll": "^1.9.0",
     "tailwindcss": "^3.4.3",
+    "three": "^0.164.1",
+    "three-stdlib": "^2.29.11",
     "yet-another-react-lightbox": "^3.18.0"
   },
   "packageManager": "yarn@4.2.1"
