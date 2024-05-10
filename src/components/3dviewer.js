@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Canvas, useLoader } from '@react-three/fiber'
-import { useGLTF, OrbitControls, MeshRefractionMaterial, Environment } from '@react-three/drei'
+import { useGLTF, OrbitControls, MeshRefractionMaterial, Environment, useProgress, Html } from '@react-three/drei'
 import { RGBELoader } from 'three-stdlib'
 import { BlendFunction } from 'postprocessing'
 import { DepthOfField, EffectComposer, Vignette } from '@react-three/postprocessing'
@@ -11,9 +11,9 @@ function Gems(props) {
     const texture = useLoader(RGBELoader, '/3d/gems.hdr')
     const { nodes } = useGLTF('/3d/gem.glb')    
     const getValues = (color)=>{switch (color) {
-      case `zel`:
+      case `Emerald`:
         return {color:'#0ca570',iord:0.3}
-      case `sin`:
+      case `Sapphire`:
         return {color:'#025c98',iord:0.1}
       default:
         return {color:'#fff',iord:0}
@@ -107,29 +107,34 @@ function Gems(props) {
     const [activeGem,setActiveGem] = React.useState(`Diamond`);
     const metals = [`Silver`,`Gold`,`Pink`]
     const gems = [`Diamond`,`Emerald`,`Sapphire`]
-    return (
+    function Loader() {
+      const { progress } = useProgress()
+      return <Html center>{progress} % loaded</Html>
+    }  return (
       <div className={`flex flex-col justify-center items-center h-[80vh]`}>
         <div className={`z-40 bg-white grid gap-2 grid-rows-2 grid-cols-1 w-full pb-2`}>
           <Switcher values={metals} label={`Select Metal`} active={activeMetal} handler={setActiveMetal}/>
           <Switcher values={gems} label={`Select Gem`} active={activeGem} handler={setActiveGem}/>
         </div>
-        <div className={`aspect-square max-w-full flex-grow`}>
+        <div className={`aspect-square max-w-full flex-grow`}>          
           <Canvas shadows camera={{ fov: 60, position: [10, 40, 30] }} dpr={[1, 2]}>
             <Environment files={'/3d/Ring_Studio_011_V4.hdr'} environmentIntensity={1} />
             <color attach="background" args={['#fff']} />
-            <Model scale={100} color={activeMetal}/>
-            <Gems scale={0.1} color={activeGem} />
             <OrbitControls makeDefault autoRotate autoRotateSpeed={0.5} enablePan={false} enableDamping={false} minDistance={4} maxDistance={4} />
-            <EffectComposer>
-              <DepthOfField focusDistance={0.1} focalLength={0.5} bokehScale={2} />          
-                <Vignette
-                  offset={0.5} 
-                  darkness={0.5} 
-                  eskil={false} 
-                  blendFunction={BlendFunction.NORMAL} 
-                />
-            </EffectComposer>
-          </Canvas>
+              <EffectComposer>
+                <DepthOfField focusDistance={0.1} focalLength={0.5} bokehScale={2} />          
+                  <Vignette
+                    offset={0.5} 
+                    darkness={0.5} 
+                    eskil={false} 
+                    blendFunction={BlendFunction.NORMAL} 
+                  />
+              </EffectComposer>
+            <React.Suspense fallback={<Loader />}>
+              <Model scale={100} color={activeMetal}/>
+              <Gems scale={0.1} color={activeGem} />
+            </React.Suspense>
+          </Canvas>          
         </div>
       </div>
     )
