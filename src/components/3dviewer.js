@@ -19,7 +19,6 @@ function Gems(props) {
         return {color:'#fff',iord:0}
     }}
     const values = getValues(props.color)
-    console.log(values)
     return (
       <group ref={ref} rotation={[-Math.PI / 2, 0, 0]} {...props}>
         <mesh geometry={nodes['Layer_01(F515426E-294D-4FC4-832F-9BAC280D6A14)'].geometry} castShadow receiveShadow>
@@ -84,13 +83,13 @@ function Gems(props) {
           let classstr
           switch (i) {        
             case 1:        
-              classstr=`${baseclass} border-t border-b ${val==active?activeclass:`bg-transparent`}`
+              classstr=`${baseclass} border-t border-b ${val===active?activeclass:`bg-transparent`}`
               break;          
             case 2:            
-              classstr=`${baseclass} border rounded-e-lg ${val==active?activeclass:`bg-transparent`}`    
+              classstr=`${baseclass} border rounded-e-lg ${val===active?activeclass:`bg-transparent`}`    
               break;          
             default:
-              classstr=`${baseclass} border rounded-s-lg ${val==active?activeclass:`bg-transparent`}`    
+              classstr=`${baseclass} border rounded-s-lg ${val===active?activeclass:`bg-transparent`}`    
               break;
           }
           return (
