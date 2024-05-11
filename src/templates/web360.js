@@ -36,9 +36,9 @@ const Web360Product = ({ pageContext }) => {
         <p className={`lg:text-xl px-5 lg:max-w-[1040px] lg:mx-auto text-sm uppercase`}>{t({ id: pageContext.price })}</p> */}
       </div>
     </div>
-    
+    <div className={`bg-white`}>
         <Viewer3d/>
-    
+    </div>
   </>
   )
 }
