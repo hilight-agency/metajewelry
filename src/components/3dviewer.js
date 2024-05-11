@@ -107,7 +107,7 @@ function Gems(props) {
           <Canvas shadows camera={{ fov: 60, position: [10, 40, 30] }} dpr={[1, 2]}>
             <Environment files={'/3d/Ring_Studio_011_V4.hdr'} environmentIntensity={1} />
             <color attach="background" args={['#fff']} />
-            <OrbitControls makeDefault autoRotate autoRotateSpeed={0.5} enablePan={false} enableDamping={false} minDistance={4} maxDistance={4} />
+            <OrbitControls makeDefault autoRotate autoRotateSpeed={0.5} enablePan={false} enableDamping={false} minDistance={3} maxDistance={3} />
               <EffectComposer>
                 <DepthOfField focusDistance={0.1} focalLength={0.5} bokehScale={2} />          
                   <Vignette
