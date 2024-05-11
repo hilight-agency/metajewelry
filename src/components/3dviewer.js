@@ -74,26 +74,14 @@ function Gems(props) {
   useGLTF.preload('/3d/gem.glb')
   
   const Switcher = ({values,label,active,handler})=>{
-    const baseclass = `px-4 py-2 text-sm font-medium border-gray-900 text-gray-900 border hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white`
-    const activeclass = `z-10 ring-2 ring-gray-500 bg-gray-900 text-white`
+    const baseclass = `w-[90px] box-border px-4 py-2 text-sm font-medium border-white border hover:bg-white hover:text-black`
+    const activeclass = `z-10 bg-white text-black`
     return (
-      <div className={`inline-flex justify-center items-center h-auto`} role="group">
-        <span className={`pr-2`}>{label}</span>
-        {values.map((val,i)=>{
-          let classstr
-          switch (i) {        
-            case 1:        
-              classstr=`${baseclass} border-t border-b ${val===active?activeclass:`bg-transparent`}`
-              break;          
-            case 2:            
-              classstr=`${baseclass} border rounded-e-lg ${val===active?activeclass:`bg-transparent`}`    
-              break;          
-            default:
-              classstr=`${baseclass} border rounded-s-lg ${val===active?activeclass:`bg-transparent`}`    
-              break;
-          }
+      <div className={`flex justify-center items-center flex-row h-auto w-full`} role="group">
+        <div className={`pr-2 w-14 text-right text-white`}>{label}</div>
+        {values.map((val)=>{
           return (
-            <button type="button" className={classstr} onClick={(e)=>handler(e.target.value)} key={val} value={val}>
+            <button type="button" className={`${baseclass} border ${val===active?activeclass:`text-white bg-transparent`}`} onClick={(e)=>handler(e.target.value)} key={val} value={val}>
               {val}
             </button>
           )
@@ -110,12 +98,12 @@ function Gems(props) {
       const { progress } = useProgress()
       return <Html center>{progress} % loaded</Html>
     }  return (
-      <div className={`flex flex-col justify-center items-center h-[80vh]`}>
-        <div className={`z-40 bg-white grid gap-2 grid-rows-2 grid-cols-1 w-full pb-2`}>
-          <Switcher values={metals} label={`Select Metal`} active={activeMetal} handler={setActiveMetal}/>
-          <Switcher values={gems} label={`Select Gem`} active={activeGem} handler={setActiveGem}/>
-        </div>
-        <div className={`aspect-square max-w-full flex-grow`}>          
+      <div className={`bg-black flex flex-col justify-center items-center md:h-screen p-2`}>
+        <div className={`z-40 grid gap-2 grid-rows-2 grid-cols-1 w-full py-4`}>
+          <Switcher values={metals} label={`Metal`} active={activeMetal} handler={setActiveMetal}/>
+          <Switcher values={gems} label={`Gem`} active={activeGem} handler={setActiveGem}/>
+        </div>        
+        <div className={`aspect-square max-w-full md:flex-grow`}>          
           <Canvas shadows camera={{ fov: 60, position: [10, 40, 30] }} dpr={[1, 2]}>
             <Environment files={'/3d/Ring_Studio_011_V4.hdr'} environmentIntensity={1} />
             <color attach="background" args={['#fff']} />
