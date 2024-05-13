@@ -59,7 +59,7 @@ module.exports = {
         output: "/"
       }
     }, {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-plugin-intl-v4`,
       options: {
         // language JSON resource path
         path: `${__dirname}/src/intl`,

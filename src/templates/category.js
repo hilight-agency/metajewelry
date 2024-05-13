@@ -1,8 +1,8 @@
 import * as React from 'react'
 import ReactVideo from '../components/reactvideo'
 import * as Scroll from 'react-scroll'
-import { GatsbySeo } from 'gatsby-plugin-next-seo';
-import { useIntl } from "gatsby-plugin-intl"
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
+import { useIntl } from 'gatsby-plugin-intl-v4'
 
 const Product = ({ pageContext }) => {
   const t = useIntl().formatMessage;
@@ -60,14 +60,15 @@ const Product = ({ pageContext }) => {
         }],
       }} />
     <div className={`transition-opacity duration-500 bg-black fixed z-30 top-0 left-0 w-full h-full ${playState !== false ? `opacity-90` : `pointer-events-none opacity-0`}`}
-      onClick={() => { setPlayState(false); }}>
+      onClick={() => { setPlayState(false); }}
+      role='button' aria-label='Pause' onKeyDown={()=>{}} tabIndex={0}>
       &nbsp;
     </div>
     <div className={`bg-black w-full h-auto lg:h-screen`}>
       <div className={`pt-[46px] lg:pt-0 lg:container lg:mx-auto `}>
-        <div className={`w-full h-0 pb-[100%] relative lg:pb-0 lg:h-screen flex justify-center items-end bg-contain bg-center bg-no-repeat`} style={{ backgroundImage: `url('/images/${pageContext.slug}.jpg')` }}>
-          <div className={`h-1/5 absolute bottom-0 z-50 lg:relative`}>
-            <h1 className={`py-[10px] font-black text-2xl text-center text-white lg:text-5xl uppercase`}>{t({ id: pageContext.title })}</h1>
+      <div className={`w-full h-0 pb-[100%] relative md:pb-0 md:h-screen flex justify-center items-end bg-contain bg-center bg-no-repeat`} style={{ backgroundImage: `url('/images/${pageContext.slug}.jpg')` }}>
+          <div className={`h-1/5 absolute bottom-0 z-50 md:relative`}>
+            <h1 className={`py-[10px] font-black text-2xl text-center text-white md:text-5xl uppercase`}>{t({ id: pageContext.title })}</h1>
           </div>
         </div>
       </div>

@@ -1,11 +1,23 @@
 
 [
   {
+    "slug":"still-images",
+    "title": "Still images",
+    "descr": "still-images-descr",
+    "price": "still-images-price",
+    "filepath": "still",
+    "template":"stillimages",
+    "works": [
+      "11","2","3","4","5","6","7","8","9","10","1"
+    ]
+  },
+  {
     "slug": "basic-animations",
     "title": "Basic animations",
     "descr": "basic-descr",
     "price": "basic-price",
     "filepath": "basic",
+    "template":"category",
     "works": [
       "SokolovBird","SokolovEarrings","SokolovGoldenRing2","1","7","11"
     ]
@@ -15,6 +27,7 @@
     "descr": "creative-descr",
     "price": "creative-price",
     "filepath": "creative",
+    "template":"category",
     "works": [
       "BellissimaDoublering","MarfinBraclet","MasterbrilliantMany","TopdogBraclet","UntamedBraclet","5","1","2","6","4","SokolovLepestki2"
     ]
@@ -24,8 +37,29 @@
     "descr": "turntable-descr",
     "price": "turntable-price",
     "filepath": "basic",
+    "template":"category",
     "works": [
       "KarlcouchonRingTime","MasterbrilRingRedgem","2","5","6","9","10","12","13"
+    ]
+  },{
+    "slug": "onbody-visualizations",
+    "title": "Onbody visualizations",
+    "descr": "onbody-visualizations-descr",
+    "price": "onbody-visualizations-price",
+    "filepath": "onbody",
+    "template":"stillimages",
+    "works": [
+      "1","2","3","4","5","6","7"
+    ]
+  },{
+    "slug": "web-360-presentations",
+    "title": "Web 360 presentations",
+    "descr": "web-360-descr",
+    "price": "web-360-price",
+    "filepath": "basic",
+    "template":"web360",
+    "works": [
+      ""
     ]
   }
 ]

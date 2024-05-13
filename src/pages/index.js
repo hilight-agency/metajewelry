@@ -4,7 +4,7 @@ import useWindowSize from '../utils/useWindowSize'
 import ReactVideo from "../components/reactvideo"
 import { graphql } from 'gatsby'
 import { GatsbySeo } from 'gatsby-plugin-next-seo'
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl-v4"
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
 import { Tween } from 'react-gsap'
@@ -120,9 +120,9 @@ const IndexPage = ({ data }) => {
       </div>
       <div className={`bg-white md:bg-black`}>
         <div className={`grid grid-cols-1 pb-5 md:pb-0 gap-5 md:gap-0 md:container md:mx-auto md:grid-cols-3`}>
-          {data.allCategoriesJson.nodes.map((e) => {
+          {data.allCategoriesJson.nodes.map((e,j) => {
             return (
-              <Item to={`/${e.slug}`} label={e.title} styleObj={{ backgroundImage: `url('/images/${e.slug}.jpg')` }}></Item>
+              <Item to={`/${e.slug}`} label={e.title} styleObj={{ backgroundImage: `url('/images/${e.slug}.jpg')` }} key={`${e.slug}-${j}`}></Item>
             )
           })}
         </div>
