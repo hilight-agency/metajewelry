@@ -32,23 +32,8 @@ const MailForm = ({ Styles }) => {
         formData.append(`phone`, values.phone.replace(/[^\d]/g, ''))
         formData.append(`email`, values.email)
         formData.append(`myname`, values.myname)
-        fetch("/form.php", {
-          method: "POST",
-          body: formData
-        }).then((response) => {
-          if (response.ok) {
-            return response.json()
-          }
-          return Promise.reject({ status: `error`, msg: t({ id: `contacts.mailerr` }) })
-        })
-          .then(response => {
-            setSubmitting(false);
-            setStatus(response);
-          })
-          .catch((obj) => {
-            setSubmitting(false);
-            setStatus(obj);
-          });
+        setSubmitting(false)
+        setStatus({msg:"Form is not working right now",status:`error`})
       }}
     >
       {({ isSubmitting, status }) => ((status && status.status === `ok`) ?
@@ -71,6 +56,7 @@ const MailForm = ({ Styles }) => {
                 {t({ id: `submit` })}
               </button>
             </div>
+            <h2 className={`pt-2`}>Form is not working right now! Please email us to <a className={`underline`} href={`mailto:we@mustbefamily.com`}>we@mustbefamily.com</a></h2>
             <div className={Styles.ps}>
               {t({ id: `contacts.privacypolicy` }, {
                 link: <a href={`/privacy-policy`} target={`_blank`} className={Styles.policylink}>{t({ id: `contacts.privacypolicylabel` })}</a>
