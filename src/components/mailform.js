@@ -1,12 +1,14 @@
 import * as React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useIntl } from "gatsby-plugin-intl-v4";
+import { Script } from "gatsby";
 
 const MailForm = ({ Styles }) => {
   const t = useIntl().formatMessage;
   const dfltStatus = { status: `notsubmitted`, msg: `` };
   return (
     <>
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" />
       <Formik
         initialStatus={dfltStatus}
         initialValues={{ phone: "", email: "", myname: "" }}
@@ -107,6 +109,10 @@ const MailForm = ({ Styles }) => {
                     component={`div`}
                   />
                 </div>
+                <div
+                  class="cf-turnstile"
+                  data-sitekey="0x4AAAAAAAaTsWX8a8fhJ3vn"
+                ></div>
                 <div>
                   <button
                     className={`${Styles.button} ${
