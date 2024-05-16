@@ -25,7 +25,8 @@
 		"required_err_msg_phone": "Please provide at least 10 digits of your phone number (Don't forget to add country and city code)",
 		"submit": "Submit",
 		"subtext": "Fill out a simple form and we will call you back.",
-		"title": "Contacts"
+		"title": "Contacts",
+		"mailsended": "We are pleased to inform you that your message has been successfully submitted. Our team will review it promptly and get back to you shortly. Thank you for reaching out to us."
 	},
 	"creationstages": "Creation stages",
 	"creative-descr": "Creative visualizations are more complex product in which there are no restrictions. With abilities of 3D visualizations You can use any background, such as a beautiful sky or landscape, designer paper or fabric. You also can place your jewelry into a branded package, use any camera angles, movements, lighting effects and all this plays to the music. Possibility to combine several decorations in one video. Best suited for solving advertising and image tasks.",
@@ -69,6 +70,6 @@
 	"onbody-visualizations-descr":"Onbody visual content allows you to understand how the jewelry or jewelry set will look in reality, will help your client in making the perfect choice.",
 	"onbody-visualizations-price": "Price from $99 per visualization",
 	"stillourworks":"Still images examples:",
-	"onbodyourworks":"Onbody visualizations examples:",	
+	"onbodyourworks":"Onbody visualizations examples:",
 	"_##_":"_##_"
 }

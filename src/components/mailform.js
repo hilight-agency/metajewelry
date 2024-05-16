@@ -41,7 +41,7 @@ const MailForm = ({ Styles }) => {
             if (key === `phone`)
               formData.set(`phone`, value.replace(/[^\d]/g, ""));
           }
-          fetch("https://tgbot.highlightsjewelry.com/resend", {
+          fetch(`${process.env.GATSBY_FORM_URL}`, {
             method: "POST",
             body: formData,
           })
@@ -56,7 +56,10 @@ const MailForm = ({ Styles }) => {
             })
             .then((response) => {
               setSubmitting(false);
-              setStatus(response);
+              setStatus({
+                status: `ok`,
+                msg: t({ id: `contacts.mailsended` }),
+              });
             })
             .catch((obj) => {
               setSubmitting(false);
@@ -111,7 +114,7 @@ const MailForm = ({ Styles }) => {
                 </div>
                 <div
                   className="cf-turnstile"
-                  data-sitekey="0x4AAAAAAAaTsWX8a8fhJ3vn"
+                  data-sitekey={`${process.env.GATSBY_TURNSTILE_KEY}`}
                 ></div>
                 <div>
                   <button
@@ -120,18 +123,9 @@ const MailForm = ({ Styles }) => {
                     }`}
                     type={`submit`}
                   >
-                    {t({ id: `submit` })}
+                    {t({ id: `contacts.submit` })}
                   </button>
                 </div>
-                <h2 className={`pt-2`}>
-                  Form is not working right now! Please email us to{" "}
-                  <a
-                    className={`underline`}
-                    href={`mailto:we@mustbefamily.com`}
-                  >
-                    we@mustbefamily.com
-                  </a>
-                </h2>
                 <div className={Styles.ps}>
                   {t(
                     { id: `contacts.privacypolicy` },
