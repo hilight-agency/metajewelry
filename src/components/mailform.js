@@ -35,10 +35,12 @@ const MailForm = ({ Styles }) => {
         }}
         onSubmit={(values, { setSubmitting, setStatus }) => {
           setStatus(dfltStatus);
-          let formData = new FormData();
-          formData.append(`phone`, values.phone.replace(/[^\d]/g, ""));
-          formData.append(`email`, values.email);
-          formData.append(`myname`, values.myname);
+          var form = document.querySelector("form#contactform");
+          var formData = new FormData(form);
+          for (var [key, value] of formData.entries()) {
+            if (key === `phone`)
+              formData.set(`phone`, value.replace(/[^\d]/g, ""));
+          }
           fetch("https://tgbot.highlightsjewelry.com/resend", {
             method: "POST",
             body: formData,
@@ -60,8 +62,6 @@ const MailForm = ({ Styles }) => {
               setSubmitting(false);
               setStatus(obj);
             });
-          /* setSubmitting(false);
-          setStatus({ msg: "Form is not working right now", status: `error` }); */
         }}
       >
         {({ isSubmitting, status }) =>
@@ -69,7 +69,7 @@ const MailForm = ({ Styles }) => {
             <div className={Styles.sendeddiv}>{status.msg}</div>
           ) : (
             <>
-              <Form className={Styles.form}>
+              <Form className={Styles.form} id={`contactform`}>
                 <div>
                   <Field
                     placeholder={t({ id: `contacts.form_name` })}
@@ -110,7 +110,7 @@ const MailForm = ({ Styles }) => {
                   />
                 </div>
                 <div
-                  class="cf-turnstile"
+                  className="cf-turnstile"
                   data-sitekey="0x4AAAAAAAaTsWX8a8fhJ3vn"
                 ></div>
                 <div>
