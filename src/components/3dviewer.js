@@ -21,7 +21,7 @@ function Gems(props) {
   const ref = React.useRef();
   const texture = useCubeTexture(
     ["px.png", "nx.png", "py.png", "ny.png", "pz.png", "nz.png"],
-    { path: "3d/gemmap/" }
+    { path: "/3d/gemmap/" }
   );
   const { nodes } = useGLTF("/3d/gem.glb");
   const getValues = (color) => {
