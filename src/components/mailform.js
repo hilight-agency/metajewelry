@@ -1,14 +1,12 @@
 import * as React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useIntl } from "gatsby-plugin-intl-v4";
-import { Script } from "gatsby";
 
 const MailForm = ({ Styles }) => {
   const t = useIntl().formatMessage;
   const dfltStatus = { status: `notsubmitted`, msg: `` };
   return (
     <>
-      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" />
       <Formik
         initialStatus={dfltStatus}
         initialValues={{ phone: "", email: "", myname: "" }}
@@ -35,13 +33,11 @@ const MailForm = ({ Styles }) => {
         }}
         onSubmit={(values, { setSubmitting, setStatus }) => {
           setStatus(dfltStatus);
-          var form = document.querySelector("form#contactform");
-          var formData = new FormData(form);
-          for (var [key, value] of formData.entries()) {
-            if (key === `phone`)
-              formData.set(`phone`, value.replace(/[^\d]/g, ""));
-          }
-          fetch(`${process.env.GATSBY_FORM_URL}`, {
+          let formData = new FormData();
+          formData.append(`phone`, values.phone.replace(/[^\d]/g, ""));
+          formData.append(`email`, values.email);
+          formData.append(`myname`, values.myname);
+          fetch("/form.php", {
             method: "POST",
             body: formData,
           })
@@ -56,10 +52,7 @@ const MailForm = ({ Styles }) => {
             })
             .then((response) => {
               setSubmitting(false);
-              setStatus({
-                status: `ok`,
-                msg: t({ id: `contacts.mailsended` }),
-              });
+              setStatus(response);
             })
             .catch((obj) => {
               setSubmitting(false);
@@ -72,7 +65,7 @@ const MailForm = ({ Styles }) => {
             <div className={Styles.sendeddiv}>{status.msg}</div>
           ) : (
             <>
-              <Form className={Styles.form} id={`contactform`}>
+              <Form className={Styles.form}>
                 <div>
                   <Field
                     placeholder={t({ id: `contacts.form_name` })}
@@ -112,10 +105,6 @@ const MailForm = ({ Styles }) => {
                     component={`div`}
                   />
                 </div>
-                <div
-                  className="cf-turnstile"
-                  data-sitekey={`${process.env.GATSBY_TURNSTILE_KEY}`}
-                ></div>
                 <div>
                   <button
                     className={`${Styles.button} ${

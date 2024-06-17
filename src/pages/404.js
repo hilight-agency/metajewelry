@@ -10,9 +10,9 @@ const NotFoundPage = () => {
         noindex={true}
         nofollow={true}
         description={`Error 404. Page not found`}
-        canonical={`https://highlightsjewelry.com/404`}
+        canonical={`https://highlights.mustbefamily.com/404`}
         openGraph={{
-          url: "https://highlightsjewelry.com/404",
+          url: "https://highlights.mustbefamily.com/404",
         }}
       />
       <div

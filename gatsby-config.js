@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jewelry 3D by Highlights jewelry`,
-    siteUrl: `https://highlightsjewelry.com/`,
+    siteUrl: `https://highlights.mustbefamily.com/`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -16,11 +16,11 @@ module.exports = {
         openGraph: {
           type: "website",
           locale: "ru_RU",
-          url: "https://highlightsjewelry.com/",
+          url: "https://highlights.mustbefamily.com/",
           site_name: "Jewelry 3D by Highlights jewelry",
           images: [
             {
-              url: "https://highlightsjewelry.com/images/social_all.jpg",
+              url: "https://highlights.mustbefamily.com/images/social_all.jpg",
               width: 720,
               height: 720,
               alt: "Jewelry 3D by Highlights jewelry",
@@ -71,9 +71,9 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/intl`,
         // supported language
-        languages: [`en`],
+        languages: [`ru`],
         // language file path
-        defaultLanguage: `en`,
+        defaultLanguage: `ru`,
         // option to redirect to `/ko` when connecting `/`
         redirect: false,
       },

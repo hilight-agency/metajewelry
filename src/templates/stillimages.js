@@ -11,12 +11,12 @@ const Stillimages = ({ pageContext }) => {
       <GatsbySeo
         title={pageContext.title}
         description={pageContext.descr}
-        canonical={`https://highlightsjewelry.com/${pageContext.slug}`}
+        canonical={`https://highlights.mustbefamily.com/${pageContext.slug}`}
         openGraph={{
-          url: `https://highlightsjewelry.com/${pageContext.slug}`,
+          url: `https://highlights.mustbefamily.com/${pageContext.slug}`,
           images: [
             {
-              url: `https://highlightsjewelry.com/images/${pageContext.slug}.jpg`,
+              url: `https://highlights.mustbefamily.com/images/${pageContext.slug}.jpg`,
               width: 720,
               height: 720,
               alt: t({ id: pageContext.descr }),

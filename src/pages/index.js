@@ -68,12 +68,12 @@ const IndexPage = ({ data }) => {
         )}
         titleTemplate={`%s`}
         description={t({ id: `index.descr` })}
-        canonical={`https://highlightsjewelry.com`}
+        canonical={`https://highlights.mustbefamily.com`}
         openGraph={{
-          url: "https://highlightsjewelry.com",
+          url: "https://highlights.mustbefamily.com",
           images: [
             {
-              url: `https://highlightsjewelry.com/images/social_main.jpg`,
+              url: `https://highlights.mustbefamily.com/images/social_main.jpg`,
               width: 720,
               height: 720,
               alt: t({ id: `index.descr` }),

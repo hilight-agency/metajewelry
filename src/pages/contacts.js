@@ -10,9 +10,9 @@ const ContactsPage = () => {
       <GatsbySeo
         title={t({ id: `contacts.title` })}
         description={t({ id: `contacts.description` })}
-        canonical={`https://highlightsjewelry.com/contacts`}
+        canonical={`https://highlights.mustbefamily.com/contacts`}
         openGraph={{
-          url: "https://highlightsjewelry.com/contacts",
+          url: "https://highlights.mustbefamily.com/contacts",
         }}
       />
       <div

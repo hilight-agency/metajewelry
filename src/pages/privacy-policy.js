@@ -6,19 +6,20 @@ const PrivacyPolicyPage = () => {
     <>
       <GatsbySeo
         title={`Privacy Policy`}
-        description={`highlightsjewelry.com website administration is obliged to maintain your privacy on the Internet. We pay great attention to securing the data you provided to us. Our privacy policy is based on&nbsp;<a href="https://ec.europa.eu/info/law/law-topic/data-protection_en" target="_blank" rel="noreferrer">the General Data Protection Regulation (GDPR) of the European Union.</a>The purposes, for which we collect your personal data are: improvement of our service, communication with visitors to this site, user data processing for the purpose of online sales, presenting the information requested by the user and for other actions listed below.`}
-        canonical={`https://highlightsjewelry.com/contacts`}
+        description={`highlights.mustbefamily.com website administration is obliged to maintain your privacy on the Internet. We pay great attention to securing the data you provided to us. Our privacy policy is based on&nbsp;<a href="https://ec.europa.eu/info/law/law-topic/data-protection_en" target="_blank" rel="noreferrer">the General Data Protection Regulation (GDPR) of the European Union.</a>The purposes, for which we collect your personal data are: improvement of our service, communication with visitors to this site, user data processing for the purpose of online sales, presenting the information requested by the user and for other actions listed below.`}
+        canonical={`https://highlights.mustbefamily.com/contacts`}
         openGraph={{
-          url: "https://highlightsjewelry.com/contacts",
+          url: "https://highlights.mustbefamily.com/contacts",
         }}
       />
       <div className={`bg-black text-white px-5 w-full pt-16 lg:pt-28 pb-5`}>
         <div className={`prose lg:prose-xl prose-invert max-w-5xl md:mx-auto`}>
           <h1>Privacy Policy</h1>
           <p>
-            highlightsjewelry.com website administration is obliged to maintain
-            your privacy on the Internet. We pay great attention to securing the
-            data you provided to us. Our privacy policy is based on&nbsp;
+            highlights.mustbefamily.com website administration is obliged to
+            maintain your privacy on the Internet. We pay great attention to
+            securing the data you provided to us. Our privacy policy is based
+            on&nbsp;
             <a
               href="https://ec.europa.eu/info/law/law-topic/data-protection_en"
               target="_blank"
@@ -44,14 +45,14 @@ const PrivacyPolicyPage = () => {
           </p>
           <h2>Data storage, alteration, and removal</h2>
           <p>
-            The user, who has provided highlightsjewelry.com with their personal
-            data, has the right for their alteration and removal, as well as the
-            right to recall the agreement to data processing. Time, during which
-            your personal data will be stored is: time the personal data is used
-            that is necessary for the website&rsquo;s main activity. After
-            finishing with the processing of your personal data, the
-            website&rsquo;s administration will permanently delete it. To access
-            your personal data, you can contact the administration on:
+            The user, who has provided highlights.mustbefamily.com with their
+            personal data, has the right for their alteration and removal, as
+            well as the right to recall the agreement to data processing. Time,
+            during which your personal data will be stored is: time the personal
+            data is used that is necessary for the website&rsquo;s main
+            activity. After finishing with the processing of your personal data,
+            the website&rsquo;s administration will permanently delete it. To
+            access your personal data, you can contact the administration on:
             highlightsjewelry@gmail.com. We will be able to pass your data to a
             third party only with your willing consent. If the data was
             transferred to a third party, which is not associated with our
@@ -61,7 +62,7 @@ const PrivacyPolicyPage = () => {
           <p>
             Records of your IP address, time of visit, browser settings,
             operational system and other technical information is saved in the
-            database when you visit highlightsjewelry.com. This data is
+            database when you visit highlights.mustbefamily.com. This data is
             necessary for the correct display of the website&rsquo;s content. It
             is impossible to identify the person of the visitor using this data.
           </p>
@@ -77,13 +78,13 @@ const PrivacyPolicyPage = () => {
           <h2>Cookies processing</h2>
           <p>
             We use cookie files for the correct display of the website&rsquo;s
-            content and for the convenience of browsing highlightsjewelry.com.
-            They are small files, that are stored on your device. They help the
-            website to remember information about you, such as in which language
-            you use the website and which pages have you already opened. This
-            information will be useful in the next visit. Thanks to cookie
-            files, the website&rsquo;s browsing becomes much more convenient.
-            You can learn more about these files&nbsp;
+            content and for the convenience of browsing
+            highlights.mustbefamily.com. They are small files, that are stored
+            on your device. They help the website to remember information about
+            you, such as in which language you use the website and which pages
+            have you already opened. This information will be useful in the next
+            visit. Thanks to cookie files, the website&rsquo;s browsing becomes
+            much more convenient. You can learn more about these files&nbsp;
             <a
               href="https://en.wikipedia.org/wiki/HTTP_cookie"
               target="_blank"
@@ -122,7 +123,7 @@ const PrivacyPolicyPage = () => {
           </p>
           <h2>Links to other websites</h2>
           <p>
-            Our website highlightsjewelry.com may contain links to other
+            Our website highlights.mustbefamily.com may contain links to other
             websites, which are not under our control. We are not responsible
             for the content of these websites. We recommend you familiarize
             yourself with the privacy policy of every website that you visit, if
@@ -130,25 +131,25 @@ const PrivacyPolicyPage = () => {
           </p>
           <h2>Changes to the privacy policy</h2>
           <p>
-            From time to time, our website highlightsjewelry.com may update our
-            privacy policy. We inform about any changes to the privacy policy,
-            placed on this webpage. We are monitoring any changes in
-            legislation, which is related to personal data in European Union and
-            Turckey. If you have entered any of your personal data on our
-            website, we will inform you about the changes in our privacy policy.
-            If your personal data, and more specifically, your contact
-            information was entered incorrectly, we will not be able to contact
-            you.
+            From time to time, our website highlights.mustbefamily.com may
+            update our privacy policy. We inform about any changes to the
+            privacy policy, placed on this webpage. We are monitoring any
+            changes in legislation, which is related to personal data in
+            European Union and Turckey. If you have entered any of your personal
+            data on our website, we will inform you about the changes in our
+            privacy policy. If your personal data, and more specifically, your
+            contact information was entered incorrectly, we will not be able to
+            contact you.
           </p>
           <h2>Feedback and final clauses</h2>
           <p>
-            You can contact the administration of highlightsjewelry.com
+            You can contact the administration of highlights.mustbefamily.com
             regarding any questions related to privacy policy on:
             highlightsjewelry@gmail.com, or by filling a contact form specified
             in a corresponding section of this website. If you do not agree with
             this privacy policy, you cannot use the services of
-            highlightsjewelry.com. In this case you should avoid visiting our
-            website.
+            highlights.mustbefamily.com. In this case you should avoid visiting
+            our website.
           </p>
         </div>
       </div>
