@@ -4,6 +4,8 @@ public
 clnrep.bat
 .env*
 .yarn/*
+public.tar.gz
+pack.sh
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
