@@ -168,7 +168,7 @@ const IndexPage = ({ data }) => {
               return (
                 <Item
                   to={`/${e.slug}`}
-                  label={e.title}
+                  label={t({ id: e.title })}
                   styleObj={{ backgroundImage: `url('/images/${e.slug}.jpg')` }}
                   key={`${e.slug}-${j}`}
                 ></Item>
